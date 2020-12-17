@@ -193,7 +193,6 @@ ol {
 ul {
 	display: visible;
 	@include primary-font;
-	// list-style-image: url('../images/smallsword.png');
   padding: 0;
   padding-left: 40px;
 	margin: 0 0 0 30px;
@@ -214,14 +213,12 @@ label {
 }
 
 a {
-	@include primary-font;
 	font-size: calc(.9rem + .7vmin);
-	// color: $red30;
-  text-decoration: underline;
 }
 
-a:hover {
-	// @include cursor;
+i {
+	@include primary-font;
+	font-style: normal;
 }
 
 /*#endregion HTML Tag Styling*/
@@ -230,26 +227,23 @@ a:hover {
 
 /*#endregion Title*/
 
-/*#region NavBar*/
+/*#region Search Bar*/
 
-/*#endregion NavBar*/
+#search-bar {
+  width: 50%;
+  margin: 10px auto 0;
+}
 
-/*#region Home Page*/
+/*#endregion Search Bar*/
 
-/*#endregion Home Page*/
+/*#region Display*/
 
-/*#region Projects Page*/
+.positive-change {
+	color: $green;
+}
 
-/*#endregion Projects Page*/
+.negative-change {
+	color: $red;
+}
 
-/*#region Credentials Page*/
-
-/*#endregion Credentials Page*/
-
-/*#region About Page*/
-
-/*#endregion About Page*/
-
-/*#region Footer*/
-
-/*#endregion Footer*/
+/*#endregion Display*/
