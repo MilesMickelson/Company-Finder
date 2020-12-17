@@ -1,0 +1,255 @@
+/*#region Global Styling*/
+
+//-----SCAFFOLDING-----
+#container-A {
+	width: 100%;
+}
+
+#container-B {
+  width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+@mixin row-center {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin col-center {
+  display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+//-----COLORS-----
+$black: #000000;
+$black-5: #0d0d0d;
+$black-10: #1a1a1a;
+$black-15: #262626;
+$black-20: #333333;
+$black-25: #404040;
+$white: #ffffff;
+$white-5: #f2f2f2;
+$white-10: #e6e6e6;
+$white-15: #d9d9d9;
+$white-20: #cccccc;
+$white-25: #bfbfbf;
+$red: #e60000;
+$green: green;
+
+//-----FONTS-----
+$header-font: Apple Chancery, URW Chancery L, Snell Roundhand, Cursive;
+$primary-font: Verdana, Arial, Times, Courier, Georgia;
+
+@mixin header-font {
+  color: $black-5;
+  font-family: $header-font;
+}
+
+@mixin primary-font {
+	color: $black-5;
+	font-family: $primary-font;
+}
+
+//-----COMMON STYLING-----
+.visible {
+	display: normal;
+}
+
+.inVisible {
+	display: none;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.center-wrap {
+	text-align: center;
+}
+
+.clearfix-wrap::after {
+	content: "";
+  clear: both;
+  display: inline-block;
+	vertical-align: top;
+	width: 100%;
+}
+
+/*#endregion Global Styling*/
+
+/*#region HTML Tag Styling*/
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+	background-color: $white-25;
+  background-size: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-repeat: no-repeat;
+	background-position: center center;
+  background-attachment: fixed;
+}
+
+//Header Wraps
+header {
+  display: visible;
+}
+
+//Main Title 
+h1 {
+	@include primary-font;
+	font-size: calc(3rem + 3vmin);
+	filter: drop-shadow(6px 6px 8px $black-5);
+	margin-block-start: 0;
+	margin-block-end: 0;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	margin: 0;
+}
+
+//Sub Title
+h2 {
+  @include primary-font;
+	font-size: calc(1.75rem + 2.5vmin);
+	text-align: center;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	margin: 0;
+}
+
+//Page Title
+h3 {
+	@include primary-font;
+	text-align: center;
+	font-size: calc(1.75rem + 2vmin);
+	text-decoration: underline;
+	margin: 25px 0 15px 0;
+}
+
+//Section Header
+h4 {
+  @include primary-font;
+	font-size: calc(1.5rem + 1vmin);
+	text-decoration: underline;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	vertical-align: middle;
+	text-align: center;
+	margin: 20px 0 0 0;
+}
+
+//Small Section Header
+h5 {
+  @include primary-font;
+	font-size: calc(1.25rem + 1vmin);
+	text-decoration: underline;
+  text-align: center;
+	margin: 10px 0 0 0;
+}
+
+//Sub-Section Header
+h6 {
+  @include primary-font;
+	font-size: calc(.9rem + .9vmin);
+	display: inline-flex;
+	margin: 5px auto 0px;
+}
+
+p {
+	@include primary-font;
+	font-size: calc(.9rem + .7vmin);
+	font-weight: bold;
+	text-align: left;
+	text-indent: 1.25em;
+	word-break: break-word;
+	display: visible;
+  margin: 5px 3% 15px;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
+}
+
+ol {
+  list-style-type: decimal;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+	display: visible;
+	@include primary-font;
+	// list-style-image: url('../images/smallsword.png');
+  padding: 0;
+  padding-left: 40px;
+	margin: 0 0 0 30px;
+}
+
+li {
+  display: list-item;
+	margin-top: 10px;
+}
+
+em {
+	@include primary-font;
+	font-style: normal;
+}
+
+label {
+	@include primary-font;
+}
+
+a {
+	@include primary-font;
+	font-size: calc(.9rem + .7vmin);
+	// color: $red30;
+  text-decoration: underline;
+}
+
+a:hover {
+	// @include cursor;
+}
+
+/*#endregion HTML Tag Styling*/
+
+/*#region Title*/
+
+/*#endregion Title*/
+
+/*#region NavBar*/
+
+/*#endregion NavBar*/
+
+/*#region Home Page*/
+
+/*#endregion Home Page*/
+
+/*#region Projects Page*/
+
+/*#endregion Projects Page*/
+
+/*#region Credentials Page*/
+
+/*#endregion Credentials Page*/
+
+/*#region About Page*/
+
+/*#endregion About Page*/
+
+/*#region Footer*/
+
+/*#endregion Footer*/
