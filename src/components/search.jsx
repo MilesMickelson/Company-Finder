@@ -7,18 +7,17 @@ const Search = (props) => {
   const { query, handleQuery, handleSubmit } = props;
   return (
     <>
-      <form onSubmit={ handleSubmit }>
+      <h4>Search by Stock Symbol</h4>
+      <form id='input-wrap' onSubmit={ handleSubmit }>
         <input
           type='text'
-          placeholder='Search..'
           id='search-bar'
-          name='query'
+          name='search-bar'
           value={ query }
           onChange={ handleQuery }
         />
-        <button type='submit' onClick={ handleSubmit }>
+        <button type='submit' onClick={ handleSubmit } id='loupe-button'>
           <img
-            className='loupe'
             id='loupe'
             src={ loupe }
             alt='loupe'

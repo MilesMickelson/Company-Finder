@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 /* eslint-disable no-console */
 /* eslint-disable arrow-body-style */
 import React, {
@@ -7,10 +8,6 @@ import React, {
 import Title from './components/title';
 import Search from './components/search';
 import Display from './components/display';
-
-// setConfig({
-//   showReactDomPatchNotification: false,
-// });
 
 const App = () => {
   const [query, setQuery] = useState([]);
@@ -23,7 +20,6 @@ const App = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (! query) {
-      // eslint-disable-next-line no-alert
       alert('Please enter a search query...');
       return;
     }
@@ -34,7 +30,10 @@ const App = () => {
       .then((response) => {
         setData(response[0]);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        alert('Please enter a valid stock symbol...');
+        console.log(error);
+      });
     setQuery('');
   };
 
