@@ -17,6 +17,6 @@ npm start - will build and run on localhost:3000
 
 ### Description
 
-Web app that allows a user to search a public database via a company stock symbol to view company's stock market profile's. After hitting a publicly available API the requested info will display on the home page with some styling to aid in data visual.
+A web app gives users a tool to search via a company stock symbol to view a company's market profile. After hitting a publicly available API, the requested info will display on the home page with some styling to aid in data visualization.
 
 * **Thank you**, ***-Miles Mickelson***

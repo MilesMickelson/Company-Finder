@@ -12,11 +12,9 @@ import Display from './components/display';
 const App = () => {
   const [query, setQuery] = useState([]);
   const [data, setData] = useState([]);
-
   const handleQuery = (event) => {
     setQuery(event.target.value);
   };
-
   const handleSubmit = (event) => {
     event.preventDefault();
     if (! query) {
@@ -28,7 +26,10 @@ const App = () => {
         return response.json();
       })
       .then((response) => {
-        setData(response[0]);
+        if (data.length === 10) {
+          data.pop();
+        }
+        setData(response);
       })
       .catch((error) => {
         alert('Please enter a valid stock symbol...');
@@ -36,7 +37,6 @@ const App = () => {
       });
     setQuery('');
   };
-
   return (
     <div id='container-A'>
       <div id='container-B'>

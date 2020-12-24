@@ -26,15 +26,16 @@
     "jsx-a11y/no-noninteractive-tabindex": [1],
     "react/no-unescaped-entities": [1],
     "mocha/no-exclusive-tests": [0],
-    "no-console": [1],
+    "no-console": [0],
     "max-len": [0],
+    "no-plusplus": [0],
     "space-unary-ops": [
       2, {
         "words": true,
         "nonwords": true,
         "overrides": {
           "new": true,
-          "++": true
+          "++": false
         }
     }]
   }
