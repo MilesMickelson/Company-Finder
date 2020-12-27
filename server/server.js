@@ -18,12 +18,30 @@ function getApiKey() {
     throw new Error('ERROR: Failed to retrieve API Key from .env file');
   }
 }
+const apiKey = getApiKey();
 
 // const dataCache = [];
+const marketListCache = [];
+
+app.get('/marketSymbols', (req, res) => {
+  if (! marketListCache) {
+    res.status(200).send(marketListCache);
+    console.log('Retrieving symbol list from server marketListCache:', marketListCache);
+  } else {
+    axios.get(`https://financialmodelingprep.com/api/v3/stock/list?apikey=${apiKey}`)
+      .then((result) => {
+        const marketList = result.data;
+        res.status(200).send(marketList);
+        marketListCache.push(marketList);
+      })
+      .catch((error) => {
+        res.status(404).send(`The API request for list data was unsuccessful: ${error}`);
+      });
+  }
+});
 
 app.get('/dataprofile', (req, res) => {
   console.log('Server Start');
-  const apiKey = getApiKey();
   const query = req.query.input;
   // const retrieveCache = dataCache.find((i) => { return i.key === query });
   // let i;
@@ -69,14 +87,14 @@ app.get('/dataprofile', (req, res) => {
       // console.log('Posted New Result to Data Cache:', dataCache);
     })
     .catch((error) => {
-      res.status(404).send(`The API data request was unsuccessful -> ${error}`);
+      res.status(404).send(`The API request for ${query} was unsuccessful: ${error}`);
     });
   //   }
   // }
 });
 
 app.get('*', (req, res) => {
-  res.status(404).send('Sorry, the page you requested does not exist.');
+  res.status(404).send('Sorry, that page does not exist.');
 });
 
 module.exports = app;

@@ -84,7 +84,6 @@ h5 {
   @include primary-font;
 	font-size: calc(1.25rem + 1vmin);
 	text-decoration: underline;
-  text-align: center;
 	margin: 10px 0 0 0;
 }
 
@@ -134,6 +133,10 @@ i {
 #loupe-button {
 	border-top-right-radius: 8px;
 	border-bottom-right-radius: 8px;
+}
+
+#list-button {
+	width: 35px;
 }
 
 /*#endregion Search Bar*/
