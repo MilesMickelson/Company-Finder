@@ -4,7 +4,7 @@ import React from 'react';
 const loupe = require('../media/loupe.png');
 
 const Search = (props) => {
-  const { query, handleQuery, handleSubmit, handleMarketList } = props;
+  const { query, handleQuery, handleSubmit } = props;
   return (
     <>
       <h4>Search by Stock Symbol</h4>
@@ -24,14 +24,6 @@ const Search = (props) => {
           />
         </button>
       </form>
-      <h5>Show me available stock symbols</h5>
-      <button type='submit' onClick={ handleMarketList } id='loupe-button'>
-        <img
-          id='list-button'
-          src={ loupe }
-          alt='loupe'
-        />
-      </button>
     </>
   );
 };
