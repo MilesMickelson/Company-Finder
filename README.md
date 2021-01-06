@@ -12,8 +12,6 @@ npm start - will build and run on localhost:3000
 
 ![Project Image 1](media/Company-Finder-1.png)
 ![Project Image 2](media/Company-Finder-2.png)
-![Project Image 3](media/Company-Finder-3.png)
-![Project Image 4](media/Company-Finder-4.png)
 
 ### Description
 
